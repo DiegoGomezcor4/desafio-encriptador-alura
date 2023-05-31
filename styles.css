@@ -188,4 +188,103 @@
     max-height: 100%;
     background-color: white;
 }
+
+.texto-encriptado {
+    position: absolute;
+    width: 336px;
+    height: 781px;
+    left: 1032px;
+    top: 72px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+}
+
+.mensaje-muneco {
+    /* Frame 5 */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    left: 1032px;
+    top: 690px;
+    background-color: white;
+
+}
+
+.mensaje-muneco p:first-child {
+    /* Ningún mensaje fue encontrado */
+
+   
+    width: 336px;
+    height: 58px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343A40;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    background-color: white;
+}
+
+.mensaje-muneco p:last-child {
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+
+
+    width: 336px;
+    height: 48px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    background-color: white;
+}
   
