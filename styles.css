@@ -189,11 +189,39 @@
     background-color: white;
 }
 
+.rectangulo-muneco button {
+    /* Button */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    left: 32px;
+    top: 845px;
+
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    background-color: white;
+    display: none;
+}
+
 .texto-encriptado {
     position: absolute;
     width: 336px;
     height: 781px;
-    left: 1032px;
+    left: 32px;
     top: 72px;
 
     font-style: normal;
@@ -206,6 +234,8 @@
     /* Gray/gray-400 */
 
     color: #495057;
+    background-color: white;
+    display: none;
 
 }
 
