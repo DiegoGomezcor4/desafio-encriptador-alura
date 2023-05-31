@@ -17,13 +17,13 @@
     left: 240px;
 }
 
-.ingreso-texto-container input {
+.ingreso-texto-container textarea {
     font-size: 32px;
     color: #0A3871;
     border: none;
 }
 
-.ingreso-texto-container input::placeholder {
+.ingreso-texto-container textarea::placeholder {
     color: #0A3871; /* Cambia el color aquí */
 }
 
