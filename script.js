@@ -5,14 +5,16 @@ var textarea = document.querySelector('textarea');
 var regex = /[A-ZÁÉÍÓÚÜ]/;
 var texto = textarea.value;
 
+function encriptacion {
+  alert('proceso de encriptado')
+}
 
-
-function encriptando() {
+function validacion() {
      var textarea = document.querySelector('textarea');
      var regex = /[A-ZÁÉÍÓÚÜ]/;
      var texto = textarea.value;
 
-    alert('procesando encriptando');
+    alert('proceso validacion');
     if (regex.test(texto)) {
         // El texto contiene mayúsculas o acentos
         alert('El texto contiene mayúsculas o acentos.');
@@ -21,9 +23,11 @@ function encriptando() {
         // Remover los acentos del texto
         var textoSinAcentos = textoMinusculas.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         textarea.value = textoSinAcentos;
+        encriptacion(textoSinAcentos);
       } else {
         // El texto no contiene mayúsculas ni acentos
         alert('El texto no contiene mayúsculas ni acentos.');
+        encriptacion(texto);
       }
 }
 
@@ -34,8 +38,8 @@ function encriptar() {
       } else {
         // rutina para encriptar
         elemento.style.display = 'none';
-        alert("llamando encriptando");
-        encriptando();
+        alert("presionado boton encriptar");
+        validacion();
       }
 
     
