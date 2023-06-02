@@ -26,9 +26,7 @@ function encriptacion(texto) {
 
   imagenSalida.style.display = 'none';
 
-  //textoSalida.value = texto;
-
-  textoSalida.value = texto;
+  textoSalida.innerText = texto;
 
   textoSalida.style.display = 'block';
 
