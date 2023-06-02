@@ -1,11 +1,39 @@
 var elemento = document.querySelector('.mensaje-muneco p:first-child');
 var textarea = document.querySelector('#ingreso-texto');
+var imagenSalida = document.querySelector('.rectangulo-muneco img');
+var textoSalida = document.querySelector('.texto-encriptado');
 
 var regex = /[A-ZÁÉÍÓÚÜ]/;
 //var texto = textarea.value;
 
-function encriptacion() {
+function encriptacion(texto) {
   alert('encriptado......................');
+
+  // Reemplazar la letra "e" por "enter"
+  texto = texto.replace(/e/gi, 'enter');
+
+  // Reemplazar la letra "i" por "imes"
+  texto = texto.replace(/i/gi, 'imes');
+
+  // Reemplazar la letra "a" por "ai"
+  texto = texto.replace(/a/gi, 'ai');
+
+  // Reemplazar la letra "o" por "ober"
+  texto = texto.replace(/o/gi, 'ober');
+
+  // Reemplazar la letra "u" por "ufat"
+  texto = texto.replace(/u/gi, 'ufat');
+
+  imagenSalida.style.display = 'none';
+
+  //textoSalida.value = texto;
+
+  textoSalida.value = texto;
+
+  textoSalida.style.display = 'block';
+
+  alert(texto);
+
 }
 
 function validacion() {
@@ -26,6 +54,7 @@ function validacion() {
 function encriptar() {
   if (textarea.value === '') {
     elemento.style.display = 'block';
+    return;
   } else {
     elemento.style.display = 'none';
     alert("presionado boton encriptar");
