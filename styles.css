@@ -92,6 +92,15 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    transition: all 0.2s ease-in-out;
+	/* efecto de transición suave */
+}
+
+#button-encriptar:hover {
+
+    transform: scale(1.05);
+
 }
 
 #button-encriptar p {
@@ -141,6 +150,15 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+
+    transition: all 0.2s ease-in-out;
+	/* efecto de transición suave */
+}
+
+#button-desencriptar:hover {
+
+    transform: scale(1.05);
+
 }
 
 #button-desencriptar p {
@@ -317,6 +335,7 @@
     align-self: stretch;
     flex-grow: 0;
     background-color: white;
+    display: none;
 }
   
 
@@ -335,7 +354,7 @@ footer {
 
 /* estilos de iconos redes */
 
-.fa-brands {
+.fa-brands, .fa-solid {
 	font-size: 30px;
 	margin: 10px;
 	transition: all 0.2s ease-in-out;
@@ -353,7 +372,7 @@ footer {
 	font-size: 30px;
 }
 
-.fa-brands:hover {
+.fa-brands:hover,.fa-solid:hover {
 
 	transform: scale(1.1);
 	/* escala el logo en un 10% */
@@ -361,20 +380,12 @@ footer {
 	/* agrega una sombra */
 }
 
-.fa-twitter:hover {
-	color: #00acee;
+.fa-linkedin:hover {
+	color: #0077B5;
 }
 
-.fa-facebook:hover {
-	color: #2f5dc2;
-}
-
-.fa-pinterest:hover {
-	color: #c8232c;
-}
-
-.fa-youtube:hover {
-	color: #c4302b;
+.fa-square-github:hover {
+	color: black;
 }
 
 .fa-instagram:hover {
@@ -383,4 +394,8 @@ footer {
 
 .fa-whatsapp:hover {
 	color: #25D366;
+}
+
+.fa-envelope:hover {
+	color: red;
 }

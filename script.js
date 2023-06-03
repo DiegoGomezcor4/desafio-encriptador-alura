@@ -7,7 +7,6 @@ var regex = /[A-ZÁÉÍÓÚÜ]/;
 //var texto = textarea.value;
 
 function encriptacion(texto) {
-  alert('encriptado......................');
 
   // Reemplazar la letra "e" por "enter"
   texto = texto.replace(/e/gi, 'enter');
@@ -25,6 +24,7 @@ function encriptacion(texto) {
   texto = texto.replace(/u/gi, 'ufat');
 
   imagenSalida.style.display = 'none';
+  document.querySelector('.mensaje-muneco p:last-child').style.display = 'none';
 
   textoSalida.innerText = texto;
 
@@ -38,13 +38,12 @@ function validacion() {
   var texto = textarea.value;
   alert(texto);
   if (regex.test(texto)) {
-    alert('El texto contiene mayúsculas o acentos.');
+    alert('El texto contiene mayúsculas o acentos, lo corrijo');
     var textoMinusculas = texto.toLowerCase();
     var textoSinAcentos = textoMinusculas.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     textarea.value = textoSinAcentos;
     encriptacion(textoSinAcentos);
   } else {
-    alert('El texto no contiene mayúsculas ni acentos.');
     encriptacion(texto);
   }
 }
@@ -52,10 +51,10 @@ function validacion() {
 function encriptar() {
   if (textarea.value === '') {
     elemento.style.display = 'block';
+    document.querySelector('.mensaje-muneco p:last-child').style.display = 'block';
     return;
   } else {
     elemento.style.display = 'none';
-    alert("presionado boton encriptar");
     validacion();
   }
 }
