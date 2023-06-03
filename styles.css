@@ -210,6 +210,11 @@
 .rectangulo-muneco button {
     /* Button */
 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
 
     box-sizing: border-box;
 
@@ -232,6 +237,7 @@
     border: 1px solid #0A3871;
     border-radius: 24px;
     background-color: white;
+    color: #0A3871;
     display: none;
 }
 

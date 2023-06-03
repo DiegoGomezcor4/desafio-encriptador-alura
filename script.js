@@ -4,7 +4,6 @@ var imagenSalida = document.querySelector('.rectangulo-muneco img');
 var textoSalida = document.querySelector('.texto-encriptado');
 
 var regex = /[A-ZÁÉÍÓÚÜ]/;
-//var texto = textarea.value;
 
 function encriptacion(texto) {
 
@@ -25,18 +24,17 @@ function encriptacion(texto) {
 
   imagenSalida.style.display = 'none';
   document.querySelector('.mensaje-muneco p:last-child').style.display = 'none';
+  document.querySelector('.rectangulo-muneco button').style.display = 'block';
 
   textoSalida.innerText = texto;
 
   textoSalida.style.display = 'block';
 
-  alert(texto);
-
 }
 
 function validacion() {
   var texto = textarea.value;
-  alert(texto);
+
   if (regex.test(texto)) {
     alert('El texto contiene mayúsculas o acentos, lo corrijo');
     var textoMinusculas = texto.toLowerCase();
@@ -58,3 +56,5 @@ function encriptar() {
     validacion();
   }
 }
+
+
