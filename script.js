@@ -57,4 +57,8 @@ function encriptar() {
   }
 }
 
-
+function copiar() {
+  alert('boton copiar presionado');
+  textoSalida.innerText = 'caja cambiada';
+  alert(textoSalida.value);
+}
