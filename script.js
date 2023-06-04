@@ -58,7 +58,20 @@ function encriptar() {
 }
 
 function copiar() {
-  alert('boton copiar presionado');
-  textoSalida.innerText = 'caja cambiada';
+  textarea.innerText = textoSalida.validacion;
   alert(textoSalida.value);
+  textarea.value = textoSalida.value;
+  portapapeles();
+
+}
+
+function portapapeles(){
+  const texto = textoSalida.value;
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+      console.log('Texto copiado al portapapeles: ' + texto);
+    })
+    .catch((error) => {
+      console.error('Error al copiar al portapapeles: ', error);
+    });
 }
