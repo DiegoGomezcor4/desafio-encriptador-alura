@@ -2,28 +2,66 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+}
+
+body {
     background-color: lightgrey;
+    transition: .3s ease all;
+}
+
+body.dark {
+    background-color: #000;
 }
 
 main {
     height: 90%;
 }
 
+
 .logo-container {
     position: absolute;
     top: 40px;
     left: 84px;
+}
+
+.logo-container img {
+    border-radius: 5px;
+    padding: 1px;
+    margin: 2px;
+    background: none;
     
 }
 
-.logo-container img:hover {
-    transition: all 0.2s ease-in-out;
+.logo-container.dark img {
+    box-shadow: 0px 0px 50px rgba(255, 255, 255);
 }
 
 .logo-container img:hover {
     transform: scale(1.1);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    /*transform: rotate(10deg); */
+    animation: tambaleo 0.3s;
+    
 }
+
+@keyframes tambaleo {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
 .ingreso-texto-container {
     position: absolute;
@@ -31,15 +69,80 @@ main {
     left: 240px;
 }
 
-.ingreso-texto-container textarea {
+/*-----------------------------------------------------------switch-----------------------------------------------------------------------------*/
+.switch {
+    position: relative;
+    top: 5em;
+    left: 63em;
+    background-color: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch.active {
+    background-color: orange;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
+
+.fa-sun,.fa-moon {
+    background: none;
+}
+
+
+
+#ingreso-texto {
     font-size: 32px;
     color: #0A3871;
     border: none;
+    transition: .3s ease all;
 }
 
-.ingreso-texto-container textarea::placeholder {
+#ingreso-texto.dark {
+    background-color:#343A40;
+    color: white;
+}
+
+#ingreso-texto::placeholder {
     color: #0A3871; /* Cambia el color aquí */
 }
+
+#ingreso-texto.dark::placeholder {
+    color: white;
+}
+
+
 
 .info-container {
     display: flex;
@@ -214,12 +317,23 @@ main {
     display:flex;
     justify-content: center;
     align-items: center;
+    transition: .3s ease all;
+}
+
+.rectangulo-muneco.dark {
+    background-color: #343A40;
+    color: #FFFFFF;
 }
 
 .rectangulo-muneco img {
     max-width: 100%;
     max-height: 100%;
     background-color: white;
+    transition: .3s ease all;
+}
+
+.rectangulo-muneco.dark img {
+    background-color: #343A40;
 }
 
 .rectangulo-muneco button {
@@ -254,6 +368,15 @@ main {
     background-color: white;
     color: #0A3871;
     display: none;
+
+    transition: all 0.2s ease-in-out;
+	/* efecto de transición suave */
+}
+
+#btnCopiar:hover {
+
+    transform: scale(1.05);
+
 }
 
 .texto-encriptado {
@@ -276,7 +399,13 @@ main {
     color: #495057;
     background-color: white;
     display: none;
+    transition: .3s ease all;
 
+}
+
+.texto-encriptado.dark {
+    background-color: #343d5b;
+    color: white;
 }
 
 .mensaje-muneco {
@@ -297,7 +426,13 @@ main {
     left: 20em;
     top: 35em;
     background-color: lightgray;
+    transition: .3s ease all;
 
+}
+
+.mensaje-muneco.dark {
+    background-color: #000;
+    color: #FFFFFF;
 }
 
 .mensaje-muneco p:first-child {
@@ -376,7 +511,7 @@ footer {
 
 /* estilos de iconos redes */
 
-.fa-brands, .fa-solid {
+.fa-brands, .fa-envelope {
 	font-size: 30px;
 	margin: 10px;
 	transition: all 0.2s ease-in-out;
@@ -394,7 +529,7 @@ footer {
 	font-size: 30px;
 }
 
-.fa-brands:hover,.fa-solid:hover {
+.fa-brands:hover,.fa-envelope:hover {
 
 	transform: scale(1.1);
 	/* escala el logo en un 10% */

@@ -98,3 +98,26 @@ textoEncriptado = textoEncriptado.replace(/ufat/gi, 'u');
 textoSalida.innerText = textoEncriptado;
 
 }
+
+const btnSwitch = document.querySelector('#switch');
+const logo = document.querySelector('.logo-container');
+const ingresoTexto = document.querySelector('#ingreso-texto');
+const mensaje = document.querySelector('.mensaje-muneco');
+const rectangulo = document.querySelector('.rectangulo-muneco');
+const Salida = document.querySelector('.texto-encriptado');
+
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+
+  logo.classList.toggle('dark');
+
+  ingresoTexto.classList.toggle('dark');
+
+  mensaje.classList.toggle('dark');
+
+  rectangulo.classList.toggle('dark');
+
+  Salida.classList.toggle('dark');
+
+});
