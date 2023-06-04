@@ -59,7 +59,6 @@ function encriptar() {
 
 function copiar() {
   textarea.innerText = textoSalida.validacion;
-  alert(textoSalida.value);
   textarea.value = textoSalida.value;
   portapapeles();
 

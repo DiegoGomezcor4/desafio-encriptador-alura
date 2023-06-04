@@ -13,6 +13,16 @@ main {
     position: absolute;
     top: 40px;
     left: 84px;
+    
+}
+
+.logo-container img:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .ingreso-texto-container {
@@ -252,6 +262,7 @@ main {
     height: 25em;
     left: 32px;
     top: 72px;
+    border: none;
 
     font-style: normal;
     font-weight: 400;
@@ -408,5 +419,5 @@ footer {
 }
 
 .fa-envelope:hover {
-	color: red;
+	color: lightgoldenrodyellow;
 }
