@@ -75,3 +75,27 @@ function portapapeles(){
       console.error('Error al copiar al portapapeles: ', error);
     });
 }
+
+function desencriptar(){
+  // Texto encriptado
+var textoEncriptado = textarea.value;
+
+// Reemplazar la letra "enter" por "e"
+textoEncriptado = textoEncriptado.replace(/enter/gi, 'e');
+
+// Reemplazar la letra "imes" por "i"
+textoEncriptado = textoEncriptado.replace(/imes/gi, 'i');
+
+// Reemplazar la letra "ai" por "a"
+textoEncriptado = textoEncriptado.replace(/ai/gi, 'a');
+
+// Reemplazar la letra "ober" por "o"
+textoEncriptado = textoEncriptado.replace(/ober/gi, 'o');
+
+// Reemplazar la letra "ufat" por "u"
+textoEncriptado = textoEncriptado.replace(/ufat/gi, 'u');
+
+// Texto desencriptado
+textoSalida.innerText = textoEncriptado;
+
+}
