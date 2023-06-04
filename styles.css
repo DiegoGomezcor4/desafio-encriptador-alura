@@ -404,7 +404,7 @@ main {
 }
 
 .texto-encriptado.dark {
-    background-color: #343d5b;
+    background-color: #495057;
     color: white;
 }
 
@@ -463,6 +463,13 @@ main {
     flex-grow: 0;
     background-color: lightgray;
     display: none;
+
+    transition: .3s ease all;
+}
+
+.mensaje-muneco.dark p:first-child {
+    background-color: #000;
+    color: white;
 }
 
 .mensaje-muneco p:last-child {
@@ -493,6 +500,12 @@ main {
     flex-grow: 0;
     background-color: lightgrey;
     display: none;
+    transition: .3s ease all;
+}
+
+.mensaje-muneco.dark p:last-child {
+    background-color: #000;
+    color: white;
 }
   
 
